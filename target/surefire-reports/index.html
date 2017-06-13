@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-com.candy.test.CCWTest">
-              <span class="suite-name border-passed">com.candy.test.CCWTest</span>
+              <span class="suite-name border-failed">com.candy.test.CCWTest</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-com.candy.test.CCWTest" class="hide-methods passed suite-com.candy.test.CCWTest"> (hide)</a> <!-- hide-methods passed suite-com.candy.test.CCWTest -->
-                      <a href="#" panel-name="suite-com.candy.test.CCWTest" class="show-methods passed suite-com.candy.test.CCWTest"> (show)</a> <!-- show-methods passed suite-com.candy.test.CCWTest -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-com.candy.test.CCWTest" class="hide-methods failed suite-com.candy.test.CCWTest"> (hide)</a> <!-- hide-methods failed suite-com.candy.test.CCWTest -->
+                      <a href="#" panel-name="suite-com.candy.test.CCWTest" class="show-methods failed suite-com.candy.test.CCWTest"> (show)</a> <!-- show-methods failed suite-com.candy.test.CCWTest -->
                     </span>
-                    <div class="method-list-content passed suite-com.candy.test.CCWTest">
+                    <div class="method-list-content failed suite-com.candy.test.CCWTest">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-com.candy.test.CCWTest" title="com.candy.test.CCWTest" hash-for-method="test">test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-com.candy.test.CCWTest -->
+                    </div> <!-- method-list-content failed suite-com.candy.test.CCWTest -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -117,9 +117,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-com.candy.test.CCWTest" class="panel com.candy.test.CCWTest">
-          <div class="suite-com.candy.test.CCWTest-class-passed">
+          <div class="suite-com.candy.test.CCWTest-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.candy.test.CCWTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -128,10 +128,40 @@
                   <a name="test">
                   </a> <!-- test -->
                   <span class="method-name">test</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;鐧诲綍&quot;}
+Command duration or timeout: 827 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Surface&apos;, ip: &apos;192.168.1.222&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.2, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1c7644c4-cbd6-4c9e-8a02-a08705835a57
+*** Element info: {Using=link text, value=鐧诲綍}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.candy.test.Login.Login(Login.java:19)
+	at com.candy.test.CCWTest.test(CCWTest.java:28)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;鐧诲綍&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;Surface&apos;, ip: &apos;192.168.1.222&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/candy/AppData/Local/Temp/anonymous665392480367336281webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/candy/AppData/Local/Temp/anonymous665392480367336281webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10779)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/candy/AppData/Local/Temp/anonymous665392480367336281webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12661)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/candy/AppData/Local/Temp/anonymous665392480367336281webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12666)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/candy/AppData/Local/Temp/anonymous665392480367336281webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12608)
+... Removed 38 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-com.candy.test.CCWTest-class-passed -->
+          </div> <!-- suite-com.candy.test.CCWTest-class-failed -->
         </div> <!-- panel com.candy.test.CCWTest -->
         <div panel-name="test-xml-com.candy.test.CCWTest" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -187,12 +217,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'test')
 data.setCell(0, 2, 'com.candy.test.CCWTest')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 2850);
 window.suiteTableData['com.candy.test.CCWTest']= { tableData: data, tableDiv: 'times-div-com.candy.test.CCWTest'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-com.candy.test.CCWTest">
               </div> <!-- times-div-com.candy.test.CCWTest -->
             </div> <!-- times-div -->
@@ -219,9 +249,15 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.candy.test.CCWTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">test</span>
+              <div class="configuration-method before">
+                <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">test</span>
+                <span class="method-start">18971 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
